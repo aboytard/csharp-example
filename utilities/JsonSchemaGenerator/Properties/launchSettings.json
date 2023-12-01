@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "JsonSchemaGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "-a C:\\Work\\AC\\mesProtocol\\MESProtocolMessages\\bin\\Debug\\net6.0\\MESProtocolMessages.dll  -d c:\\tmp -c DeviceDataV3"
+    }
+  }
+}
