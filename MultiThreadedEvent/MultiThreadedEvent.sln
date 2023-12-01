@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedEvent", "MultiThreadedEvent\MultiThreadedEvent.csproj", "{CBE69B6D-4AC5-4F9B-B547-751691A542DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiThreadedEventTests", "MultiThreadedEventTests\MultiThreadedEventTests.csproj", "{3C320E90-11C9-477B-A86D-A8B474D4A8DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CBE69B6D-4AC5-4F9B-B547-751691A542DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBE69B6D-4AC5-4F9B-B547-751691A542DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBE69B6D-4AC5-4F9B-B547-751691A542DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBE69B6D-4AC5-4F9B-B547-751691A542DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C320E90-11C9-477B-A86D-A8B474D4A8DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C320E90-11C9-477B-A86D-A8B474D4A8DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C320E90-11C9-477B-A86D-A8B474D4A8DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C320E90-11C9-477B-A86D-A8B474D4A8DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4A1B1341-30D1-4E05-9320-6621EAC7A29E}
+	EndGlobalSection
+EndGlobal
