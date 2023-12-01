@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.0" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.0" />
+    <PackageReference Include="coverlet.collector" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\_1_intro-async-await\_1_intro-async-await.csproj" />
+    <ProjectReference Include="..\_2_task-parallel-library\_2_task-parallel-library.csproj" />
+    <ProjectReference Include="..\_3_parallel_for_foreach_invoke\_3_parallel_for_foreach_invoke.csproj" />
+    <ProjectReference Include="..\_4_asynchronous_programming_othertopics\_4_asynchronous_programming_othertopics.csproj" />
+    <ProjectReference Include="..\_5_parallel_linq\_5_parallel_linq.csproj" />
+  </ItemGroup>
+</Project>
