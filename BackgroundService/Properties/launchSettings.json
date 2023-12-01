@@ -1,0 +1,9 @@
+﻿  {
+    "profiles": {
+      "MyServiceApi": {
+        "commandName": "Executable",
+        "executablePath": "dotnet.exe",
+        "commandLineArgs": "C:\\Users\\a00542157\\source\\repos\\ConnectionSimulator\\MyServiceApi\\bin\\Debug\\net6.0\\MyServiceApi.dll "
+      }
+    }
+  }
