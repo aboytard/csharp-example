@@ -16,3 +16,7 @@ asynchronous-programming/TaskParallelLibrary/TaskParallelLibrary/obj
 asynchronous-programming/Tests/obj
 asynchronous-programming/ThreadingExample/TaskCompletionSourceExample/obj
 asynchronous-programming/ThreadingExample/ThreadingExample/obj
+RecursiveExample/.vs
+TestMatrice/.vs
+TestMatrice/TestMatrice/bin
+TestMatrice/TestMatrice/obj
