@@ -27,6 +27,7 @@ namespace EntityFrameworkExample
             using (var blogginContext = new BloggingContext(dbPath, databaseType))
             {
                 blogginContext.Database.EnsureCreated();
+                // can only add if the db is empty.. primary key cannot be added twice
                 blogginContext.Blogs.Add(new Blog()
                 {
                     BlogId = 0,
