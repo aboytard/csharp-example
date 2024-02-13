@@ -18,7 +18,7 @@ namespace EntityFrameworkExample
             //DbCreation.CreateDataBase(dbPath, dataBaseChoice);
             Console.WriteLine("Hello World!");
 
-            //ExampleAddFirstDataInSQLServer();
+            ExampleAddFirstDataInSQLServer();
         }
 
         public static void ExampleAddFirstDataInSQLServer()
