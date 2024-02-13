@@ -19,31 +19,7 @@ namespace EntityFrameworkExample
             //DbCreation.CreateDataBase(dbPath, dataBaseChoice);
             Console.WriteLine("Hello World!");
 
-            ExampleAddFirstDataInSQLServer(dbPath, dataBaseChoice);
-        }
-
-        public static void ExampleAddFirstDataInSQLServer(string dbPath, DatabaseType databaseType)
-        {
-            using (var blogginContext = new BloggingContext(dbPath, databaseType))
-            {
-                blogginContext.Database.EnsureCreated();
-                // can only add if the db is empty.. primary key cannot be added twice
-                blogginContext.Blogs.Add(new Blog()
-                {
-                    BlogId = 0,
-                    Url = "url/0",
-                    Posts = new List<Post>()
-                    {
-                        new Post()
-                        {
-                            PostId = 0, Title = "Post/0", Content = "Content/0", BlogId = 0
-                        }
-                    }
-                });
-                blogginContext.SaveChanges();
-            }
-            Console.WriteLine("Data Added");
-            Console.ReadKey();
+            DbCreation.ExampleAddFirstDataInSQLServer(dbPath, dataBaseChoice);
         }
     }
 }
