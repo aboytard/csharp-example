@@ -9,7 +9,8 @@ namespace EntityFrameworkExample
             //string dbPath = "C:\\Test - Sample\\EntityFramework\\data.db";
             //var dataBaseChoice = DatabaseType.SQLite;
 
-            //var dataBaseChoice = DatabaseType.SQLServer;
+            var dataBaseChoice = DatabaseType.SQLServer;
+            string dbPath = "Server=127.0.0.1;Database=BlogDb;User Id=sa;Password=Test123456789!;MultipleActiveResultSets = true;";
 
             //var builder = WebApplication.CreateBuilder(args);
             //builder.Services.AddDbContext<BloggingContext>(
@@ -18,12 +19,12 @@ namespace EntityFrameworkExample
             //DbCreation.CreateDataBase(dbPath, dataBaseChoice);
             Console.WriteLine("Hello World!");
 
-            ExampleAddFirstDataInSQLServer();
+            ExampleAddFirstDataInSQLServer(dbPath, dataBaseChoice);
         }
 
-        public static void ExampleAddFirstDataInSQLServer()
+        public static void ExampleAddFirstDataInSQLServer(string dbPath, DatabaseType databaseType)
         {
-            using (var blogginContext = new BloggingContext())
+            using (var blogginContext = new BloggingContext(dbPath, databaseType))
             {
                 blogginContext.Database.EnsureCreated();
                 blogginContext.Blogs.Add(new Blog()

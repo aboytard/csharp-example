@@ -4,16 +4,16 @@ namespace EntityFrameworkExample.Data
 {
     public class BloggingContext : DbContext
     {
-        //private string connectionString = "";
-        //private DatabaseType databaseType;
+        private string dbPath = "";
+        private DatabaseType databaseType;
 
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<Post> Posts { get; set; }
 
-        public BloggingContext(/*string connection, DatabaseType databaseType*/)
+        public BloggingContext(string dbPath, DatabaseType databaseType)
         {
-            //connectionString = connection;
-            //this.databaseType = databaseType;
+            this.dbPath = dbPath;
+            this.databaseType = databaseType;
         }
 
         public BloggingContext(DbContextOptions<BloggingContext> options)
@@ -24,10 +24,10 @@ namespace EntityFrameworkExample.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            //if (databaseType == DatabaseType.SQLite)
-            //    optionsBuilder.UseSqlite(connectionString);
-            //else if (databaseType == DatabaseType.SQLServer)
-            optionsBuilder.UseSqlServer("Server=127.0.0.1;Database=BlogDb;User Id=sa;Password=Test123456789!;MultipleActiveResultSets = true;");
+            if (databaseType == DatabaseType.SQLite)
+                optionsBuilder.UseSqlite(dbPath);
+            else if (databaseType == DatabaseType.SQLServer)
+                optionsBuilder.UseSqlServer(dbPath);
         }
     }
 
