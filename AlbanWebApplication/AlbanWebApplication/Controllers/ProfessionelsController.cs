@@ -3,6 +3,7 @@ using AlbanWebApplication.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
+using System.Windows;
 
 namespace AlbanWebApplication.Controllers
 {
@@ -155,7 +156,7 @@ namespace AlbanWebApplication.Controllers
         public async Task<IActionResult> ImportProfessionalsFromExcel()
         {
             // a mettre dans la requette par la suite
-            string filePath = "C:\\Autojust\\Clean-Team-V2.xlsx";
+            string filePath = pathToImport /*?? "C:\\Autojust\\Clean-Team-V2.xlsx"*/;
             var professionels = GetProfessionelMapping(filePath);
             foreach(var kvp in professionels)
             {
@@ -236,9 +237,16 @@ namespace AlbanWebApplication.Controllers
             return mappingDictionary;
         }
 
-        private string ChoseExcelFile()
+        private string pathToImport;
+        [HttpPost]
+        public async Task<IActionResult> UploadExcelPath(IFormFile file)
         {
-            throw new NotImplementedException();
+            if (file != null && file.Length > 0)
+            {
+                var filePath = Path.Combine("chemin/vers/le/stockage", file.FileName);
+                pathToImport = filePath;
+            }
+            return View(); // Retour à la vue si aucun fichier n'est sélectionné
         }
     }
 }

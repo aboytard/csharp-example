@@ -14,7 +14,14 @@
             <input type="submit" value="Import Excel" />
         </form>
     </p>
+    <p>
+        <form asp-controller="Professionels" asp-action="UploadExcelPath" method="post">
+            <label for="fileInput">Sélectionner un fichier :</label>
+            <input type="file" name="file" id="fileInput" />
+        </form>
+    </p>
 </form>
+
 
 
 <table class="table">
