@@ -41,3 +41,7 @@ RabbitMQTutorial/RabbitMQTutorial/RabbitMQKiki/obj
 RabbitMQTutorial/RabbitMQTutorial/RabbitMQCoco/obj
 .vs
 SendEmailExample/SendEmailExample/bin
+AlbanWebApplication/AlbanWebApplication/bin
+AlbanWebApplication/AlbanWebApplication/wwwroot
+AlbanWebApplication/AlbanWebApplication/obj
+AlbanWebApplication/AlbanWebApplication/Migrations
