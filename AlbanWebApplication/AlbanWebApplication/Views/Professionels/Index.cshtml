@@ -23,58 +23,79 @@
 </form>
 
 
+<style>
+    .table-scrollable {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Adresse)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Siret)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Adresse)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Siret)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        .table-scrollable th, .table-scrollable td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+    .scrollable-container {
+        max-height: 200px; /* Ajustez la hauteur maximale selon vos besoins */
+        overflow-y: auto;
+    }
+</style>
+
+<div class="scrollable-container">
+    <table class="table table-scrollable">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Adresse)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Email)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Phone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Siret)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Adresse)
+                </td>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Email)
+                </td>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Phone)
+                </td>
+                <td style="max-width: 150px; white-space: normal;">
+                    @Html.DisplayFor(modelItem => item.Siret)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>
+</div
